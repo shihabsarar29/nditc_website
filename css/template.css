@@ -1,0 +1,473 @@
+* {
+  box-sizing: border-box;
+}
+
+body {							
+  text-align:justify;
+  font-family: 'Franklin Gothic Book', arial;
+}
+
+
+.page {
+  height: 100%;
+  overflow:hidden;
+  background-color: #37393A;							/* Menu Page Color*/
+}
+
+.content {
+  height: 200%;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  background-color:	white;							/*Main Page Color */
+  
+}
+
+
+.content_inner {
+  height: 50%;
+  overflow-y: auto;
+}
+
+.pgap {
+	padding:0 5%;
+}
+
+.h-act {
+	color:#37393A;
+	font-weight:700;
+	text-transform:uppercase;
+	font-family:'Agency FB', arial;
+}
+
+
+/*   Motto  */
+
+.motto {
+  font-size: 1.5em;
+  color: white;
+  font-weight: 700;
+  text-align: right;
+  font-family:'Agency FB', arial;
+  text-transform:uppercase;
+}
+
+
+
+
+.logo {
+	height:80px;
+}
+
+
+
+
+
+
+
+			/* Menu Icon */
+
+
+.menu_open, .menu_close {
+  z-index: 900;
+  position: absolute;
+  top:30px;
+  left: 92%;
+  cursor: pointer;
+  width: 20px;
+  transition: -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+}
+
+.menu_open {
+  -webkit-transform-origin: -100px -100px;
+          transform-origin: -100px -100px;
+}
+
+
+		
+		
+			
+			/* Menu Page List*/
+
+
+.menu_items {
+  position: fixed;
+  bottom: 0;
+  left: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu_items li {
+  height: 1em;
+  margin-bottom: 30px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  transition: -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1), -webkit-transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+}
+.menu_items li:nth-child(2) {
+  margin-left: 20px;
+}
+.menu_items li:nth-child(3) {
+  margin-left: 40px;
+}
+.menu_items li:nth-child(4) {
+  margin-left: 60px;
+}
+.menu_items li:nth-child(5) {
+  margin-left: 80px;
+}
+.menu_items li:nth-child(6) {
+  margin-left: 100px;
+}
+.menu_items a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight:bold;
+  color:white;
+  transition: color .2s;
+  font-size:1em;
+}
+.menu_items a .icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu_items a:hover {
+  color: #77ffe2;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+		/* Opening Menu */
+
+
+.shazam .content {
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+.shazam .menu_open {
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+.shazam .menu_close {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.shazam .menu_items li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  transition: -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.shazam .menu_items li:nth-child(2) {
+  transition-delay: .47s;
+}
+.shazam .menu_items li:nth-child(3) {
+  transition-delay: .48s;
+}
+.shazam .menu_items li:nth-child(4) {
+  transition-delay: .48s;
+}
+.shazam .menu_items li:nth-child(5) {
+  transition-delay: .50s;
+}
+.shazam .menu_items li:nth-child(6) {
+  transition-delay: .51s;
+}
+
+
+
+.homecover {
+	width:100%;
+	background:URL("../img/cover.jpg");
+	background-size:cover;
+	color:white;
+	font-size:1.2em;
+	padding:10%;
+	font-weight:500;
+	font-family:'Agency FB', arial;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	text-align:justify;
+	text-align-last: center;
+}
+
+.break {
+	display:none;
+}
+
+.soon {
+	text-align:center;
+	font-size:5em;
+}
+
+
+
+
+
+
+
+
+			/* Responsive */
+			
+@media only screen and (max-width: 1000px) {
+	.menu_open, .menu_close {
+		left: 88%;
+		top: 15px;
+	}
+	.logo {
+		height:70px;
+	}
+	.motto {
+		display:none;
+	}
+	.homecover {
+		font-size:1em;
+		padding:8% 5%;
+	}
+	.homecover h1 {
+		font-size:1.3em;
+	}
+}
+
+
+@media only screen and (max-width: 600px){
+	.logo {
+		height:60px;
+	}
+	.content2 {
+	  font-size: 1em;
+	}
+	.homecover {
+		background:URL("../img/cover.jpg");
+		background-size:cover;
+	}
+	.break {
+		display:inline;
+	}
+	.soon {
+		font-size:3em;
+	}
+}
+
+
+
+
+
+
+
+		/* Section Title */
+		
+.section-title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.section-title h1 {
+	font-size: 28px;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 15px;
+	display: inline-block;
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+	font-weight:700;
+}
+.section-title h1::before {
+	position: absolute;
+	content: "";
+	z-index: 1;
+	width: 90px;
+	height: 2px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -45px;
+}
+.section-title h1::after {
+	position: absolute;
+	content: "";
+	z-index: 1;
+	width: 60px;
+	height: 2px;
+	bottom: -4px;
+	left: 50%;
+	margin-left: -30px;
+}
+
+.section-title h1::before,.section-title h1::after{
+	background-color: #17A689;
+}
+
+
+
+
+
+/* Footer */
+  
+
+.btn {
+	display: inline-block;
+	background: #1ABC9C;
+	color: #fff;
+	padding: 14px 35px;
+	text-transform: uppercase;
+	font-size: 14px;
+	border: 0px solid;
+	font-weight: 500;
+	position: relative;
+	border-radius:3px;
+}
+
+
+
+
+
+
+input,
+input:focus,
+input:active {
+	border:none;
+    outline: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+
+
+.contact-us {
+	position: relative;
+	z-index: 43;
+}
+.contact-us .form {
+	margin-top:10px;
+}
+.contact-us .form-group {
+	position: relative;
+	display: block;
+	margin:0.5% 0;
+}
+.contact-us .form-group i {
+	position: absolute;
+	font-size: 16px;
+	padding: 15px 12px;
+}
+.contact-us .form-group input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ddd;
+	padding-left: 10px;
+	border-radius: 5px;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	font-weight: 400;
+	border-radius: 0px;
+}
+.contact-us .form-group textarea {
+	border: 1px solid #ddd;
+	padding: 10px;
+	width: 100%;
+	padding-left: 10px;
+	resize: none;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	box-shadow: none;
+	border-radius: 0px;
+}
+.contact-us .form-group input:hover,
+.contact-us .form-group input:focus,
+.contact-us .form-group textarea:hover{
+	outline:none;
+}
+.contact-us .form-group .btn {
+}
+.contact-us .form-group .btn:hover{
+	background:#17A689;
+	color:white;
+}
+.contact-us .form-group.button {
+	margin: 0;
+	text-align: left;
+}
+.contact-us .contact {
+	margin-top: 30px;
+}
+.contact-us .contact h2{
+	font-size:18px;
+	margin-bottom:15px;
+}
+
+
+.contact_info {
+	padding-left:0;
+}
+
+.contact_info li {
+  display: block;
+  text-decoration: none;
+  font-size:1em;
+  color:white;
+  margin-bottom: 20px;
+  padding-left:0;
+}
+
+
+.contact_info li .icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+.contact_info a {
+  text-decoration: none;
+  color:white;
+}
+.contact_info a:hover {
+	text-decoration: none;
+	color:#77ffe2;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #1ABC9C;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #17A689;
+}
+
